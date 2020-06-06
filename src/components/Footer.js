@@ -53,7 +53,6 @@ const Footer = () => (
     `}
     render={(data) => {
       const { name, socialLinks } = data.contentfulAbout;
-      console.log(socialLinks);
       
       return (
         <Box
