@@ -86,7 +86,7 @@ const LandingServices = () => {
                   allContentfulService.nodes.map((service, index) => {
                       const { paragraph: { paragraph }, image, heading } = service;
                       return (
-                        <Flex px={['0px', LAYOUT_MARGIN]} textAlign="center" justifyContent="center" flexWrap='wrap'>
+                        <Flex px={['0px']} textAlign="center" justifyContent="center" flexWrap='wrap'>
                           {
                               isEven(index) && isDesktop ? (
                                 <Fragment>

@@ -8,21 +8,13 @@ const ResponsiveImage = ({ desktopImageAlt, desktopImageURL, mobileImageAlt, mob
       alt={desktopImageAlt}
       src={desktopImageURL}
       width={1}
-      sx={{ height:'100%', 
-                  '@media screen and (max-width: 639px)': {
-                    display: 'none',
-                  }
-                }}
+      display={['none','block']}
     />
     <Image
       alt={mobileImageAlt}
       src={mobileImageURL}
       width={1}
-      sx={{ height:'100%', 
-                  '@media screen and (min-width: 639px)': {
-                    display: 'none',
-                  }
-                }}
+      display={['block','none']}
     />
   </Fragment>
 );

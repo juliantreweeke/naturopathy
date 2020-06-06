@@ -4,22 +4,20 @@ import PropTypes from 'prop-types';
 import { Link } from "gatsby"
 import colors from '../../colors';
 
-const mobileStyles = {
-  marginLeft:'0px',
-  padding:'10px',
-  fontSize:'40px',
-}
-
-const RouteLink = ({ link, title, isDesktop }) => (
+const RouteLink = ({ link, title }) => (
   <Fragment>
     <Box
       as="li"
       ml={[3, 4]}
       color="primary"
-      fontSize={[2, 3]}
-      style={isDesktop ? {} : mobileStyles}
+      fontSize={[1, 2, 2, 3]}
       sx={{
-        listStyleType:'none'
+        listStyleType:'none',
+        '@media screen and (max-width: 639px)': {
+          marginLeft:'0px',
+          padding:'10px',
+          fontSize:'40px',
+        }
       }}
     >
       <Link 
@@ -36,7 +34,6 @@ const RouteLink = ({ link, title, isDesktop }) => (
 
 RouteLink.propTypes = {
   link: PropTypes.string.isRequired,
-  isDesktop: PropTypes.bool,
   title: PropTypes.string.isRequired,
 };
 
