@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { MOBILE_BREAKPOINT } from '../../styleConstants';
+/* eslint-disable import/prefer-default-export */
 
 export const useWindowSize = () => {
   const isClient = typeof window === 'object';
@@ -8,7 +9,7 @@ export const useWindowSize = () => {
     return {
       width: isClient ? window.innerWidth : undefined,
       height: isClient ? window.innerHeight : undefined,
-      isDesktop: window.innerWidth > MOBILE_BREAKPOINT,
+      isDesktop: isClient ? window.innerWidth > MOBILE_BREAKPOINT : undefined,
     };
   }
 

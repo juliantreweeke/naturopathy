@@ -74,6 +74,10 @@ const Helmet = ({ theme = {} }) => (
             sizes="16x16"
             href={`https:${profile.favicon16.src}`}
           />
+          <script 
+            src="https://embed.acuityscheduling.com/js/embed.js" 
+            type="text/javascript" 
+          />
         </ReactHelmet>
       );
     }}

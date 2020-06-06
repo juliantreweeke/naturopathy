@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Flex } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
+import CrossIcon from '../../svgs/cross.svg';
 
 const MenuDropDown = ({ mobileMenuState, navLinks}) => {
   const {mobileMenuOpen, toggleMobileMenu} = mobileMenuState;
@@ -10,11 +11,10 @@ const MenuDropDown = ({ mobileMenuState, navLinks}) => {
       role="navigation"
       color="primary"
       sx={{
-      cursor:'pointer',
       position:'relative',
     }}
     >
-      MENU
+      <Button color="primary" bg="white" sx={{ fontWeight:'300', cursor: 'pointer'}}>MENU</Button>   
       {
         mobileMenuOpen && (
           <Flex
@@ -43,17 +43,13 @@ const MenuDropDown = ({ mobileMenuState, navLinks}) => {
               alignItems:"right",
               justifyContent:"flex-end"
             }}
-
-            >
-              <Button
-                variant="outline"
+            > 
+              <CrossIcon 
                 onClick={toggleMobileMenu}
-                sx={{border:"none"}}
-              >
-                X
-              </Button>
+                height={40}
+                style={{cursor:'pointer'}}
+              />
             </Flex>
-            
             {navLinks}     
           </Flex>
       )}

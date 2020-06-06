@@ -4,6 +4,7 @@ import Tippy from '@tippy.js/react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import 'tippy.js/dist/tippy.css'; // eslint-disable-line
+import FacebookIcon from '../../svgs/facebook.svg';
 
 const IconLink = styled(Link)`
   transition: color 0.5s;
@@ -25,7 +26,7 @@ const SocialLink = ({  name, url, color }) => (
       rel="noreferrer"
       aria-label={name}
     > 
-      {name}
+      <FacebookIcon height={40} />
     </IconLink>
   </Tippy>
 );

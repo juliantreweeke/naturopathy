@@ -17,6 +17,7 @@ const HeaderContainer = styled(Headroom)`
   background:${(props) => props.theme.colors.white};;
   position: relative;
   width: 100%;
+  height:80px;
 `;
 
 const CTA = ({ link, title }) => (
