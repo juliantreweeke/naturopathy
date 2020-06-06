@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Image, Flex, Box, Text } from 'rebass/styled-components';
+import { Heading, Flex, Box, Text } from 'rebass/styled-components';
 import { Container } from '../../components/Container';
-import { useWindowSize } from '../../hooks/useWindowSize';
+import ResponsiveImage from '../../components/ResponsiveImage';
 
 const contentFulQuery = graphql`
 query SiteTitleQuery {
@@ -33,9 +33,7 @@ const LandingPage = () => (
     <StaticQuery
       query={contentFulQuery}
       render={({ allContentfulLandingPage }) => {
-        const { isDesktop } = useWindowSize();
         const { image, imageMobile, heading, paragraph,paragraph2 } = allContentfulLandingPage.nodes[0];
-        const landingImage = isDesktop ? image : imageMobile;
         return (
           <Fragment>
             <Flex
@@ -46,11 +44,11 @@ const LandingPage = () => (
                 width={[1, 2/5]}
                 mb={[4, null]}
               >
-                <Image
-                  alt={landingImage.description}
-                  src={landingImage.file.url}
-                  width={1}
-                  sx={{ height:'100%' }}
+                <ResponsiveImage
+                  desktopImageAlt={image.description}
+                  desktopImageURL={image.file.url}
+                  mobileImageAlt={imageMobile.description}
+                  mobileImageURL={imageMobile.file.url}
                 />
               </Box>
               <Flex
