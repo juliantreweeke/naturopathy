@@ -27,7 +27,7 @@ query landingPageAboutQuery {
 `
 
 const LandingPageAbout = () => (
-  <Container>
+  <Container maxHeight>
     <StaticQuery
       query={contentFulQuery}
       render={({ allContentfulLandingPageAbout }) => {

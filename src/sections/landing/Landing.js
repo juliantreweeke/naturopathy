@@ -29,7 +29,7 @@ query SiteTitleQuery {
 `
 
 const LandingPage = () => ( 
-  <Container>
+  <Container maxHeight>
     <StaticQuery
       query={contentFulQuery}
       render={({ allContentfulLandingPage }) => {

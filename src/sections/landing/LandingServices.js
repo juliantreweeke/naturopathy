@@ -1,5 +1,3 @@
-
-
 import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Image, Flex, Box, Text } from 'rebass/styled-components';

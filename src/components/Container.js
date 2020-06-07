@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { MOBILE_BREAKPOINT } from '../../styleConstants'
 
 export const Container = styled.div`
+  ${({ maxHeight }) => maxHeight && `
+  max-height: 100vh;
+  `}
   width:100vw;
   display: flex;
   flex: 0 1 auto;
