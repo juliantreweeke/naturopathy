@@ -16,9 +16,9 @@ query logoQuery {
 }
 `
 const Logo = (
-    <StaticQuery
-      query={contentFulQuery}
-      render={({ allContentfulAbout }) => {
+  <StaticQuery
+    query={contentFulQuery}
+    render={({ allContentfulAbout }) => {
         const { profile } = allContentfulAbout.nodes[0];
         return (
           <Image
@@ -31,7 +31,7 @@ const Logo = (
           />
         );
       }}
-    />
+  />
 );
 
 

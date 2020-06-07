@@ -1,6 +1,6 @@
 import React from 'react';
 import Headroom from 'react-headroom';
-import { Button, Flex } from 'rebass/styled-components';
+import { Box, Button, Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
@@ -26,7 +26,7 @@ const CTA = ({ link, title }) => (
   </Button>
 )
 
-const Header = ({ links, isDesktop, mobileMenuState }) => {
+const Header = ({ links, mobileMenuState }) => {
 
   const navLinks = links.map(({ title, link }) => (
     <RouteLink
@@ -34,14 +34,13 @@ const Header = ({ links, isDesktop, mobileMenuState }) => {
       link={link}
       title={title}
       selected={false}
-      isDesktop={isDesktop}
     />
   ));
 
   return (
     <HeaderContainer>
       <Fade top>
-        <Flex
+        <Box
           as="nav"
           flexWrap="wrap"
           justifyContent="space-between"
@@ -49,14 +48,26 @@ const Header = ({ links, isDesktop, mobileMenuState }) => {
           p={3}
           mx={[0, 0, LAYOUT_MARGIN]}
           role="navigation"
+          display={['none','flex']}
+        > 
+          {Logo}
+          <Flex as='ul' mr={[0, 3, 5]}>{navLinks}</Flex> 
+          <CTA link="bookings" title="BOOK NOW" />
+        </Box>
+        <Box
+          as="nav"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          alignItems="center"
+          p={3}
+          mx={[0, 0, LAYOUT_MARGIN]}
+          role="navigation"
+          display={['flex','none']}
         >
           {Logo}
-          { isDesktop ? 
-            <Flex as='ul' mr={[0, 3, 5]}>{navLinks}</Flex> :
-            <MenuDropDown navLinks={navLinks} mobileMenuState={mobileMenuState} />
-          }
+          <MenuDropDown navLinks={navLinks} mobileMenuState={mobileMenuState} />
           <CTA link="bookings" title="BOOK NOW" />
-        </Flex>
+        </Box>
       </Fade>
     </HeaderContainer>
   );
@@ -80,7 +91,6 @@ Header.propTypes = {
       title: PropTypes.number,
     })
   ),
-  isDesktop: PropTypes.bool.isRequired
 };
 
 export default Header;

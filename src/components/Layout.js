@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 import colors from '../../colors';
 import Helmet from './Helmet';
-import { useWindowSize } from '../hooks/useWindowSize';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -51,10 +50,10 @@ const links = [
     title: 'ABOUT',
     link: 'about'
   },
-  {
-    title: 'BLOG',
-    link:'blog'
-  },
+  // {
+  //   title: 'BLOG',
+  //   link:'blog'
+  // },
   {
     title: 'BOOKINGS',
     link: 'bookings'
@@ -62,7 +61,6 @@ const links = [
 ]
 
 const Layout = ({ children }) => {
-  const { isDesktop } = useWindowSize();
 
   const [mobileMenuOpen, setMobileMenu] = useState(false);
 
@@ -74,7 +72,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <ScrollingProvider>
           <Helmet />
-          <Header mobileMenuState={{mobileMenuOpen, toggleMobileMenu}} isDesktop={isDesktop} links={links} />
+          <Header mobileMenuState={{mobileMenuOpen, toggleMobileMenu}} links={links} />
           {children}
           <Footer />
         </ScrollingProvider>

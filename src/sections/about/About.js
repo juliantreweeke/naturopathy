@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Image, Flex, Box, Text } from 'rebass/styled-components';
 import Fade from 'react-reveal/Fade';
+import { Container } from '../../components/Container';
 import { LAYOUT_MARGIN } from '../../../styleConstants';
 
 const contentFulQuery = graphql`
@@ -32,9 +33,11 @@ query aboutPageQuery {
 `
 
 const About = () => (
-  <StaticQuery
-    query={contentFulQuery}
-    render={({ allContentfulAbout }) => {
+  <Container>
+
+    <StaticQuery
+      query={contentFulQuery}
+      render={({ allContentfulAbout }) => {
                 const { 
                         image, 
                         paragraph1: { paragraph1 }, 
@@ -44,6 +47,7 @@ const About = () => (
                         heading 
                     } = allContentfulAbout.nodes[0];
                 return (
+
                   <Fade>
                     <Flex px={[20,LAYOUT_MARGIN]} textAlign="center" justifyContent="center" flexWrap='wrap' mt={[4]}>
                       <Flex
@@ -90,7 +94,9 @@ const About = () => (
                   </Fade>
                 );
             }}
-  />
+    />
+  </Container>
+
 );
 
 export default About;

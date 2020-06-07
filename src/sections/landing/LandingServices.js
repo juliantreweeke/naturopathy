@@ -6,8 +6,6 @@ import { Heading, Image, Flex, Box, Text } from 'rebass/styled-components';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 import { useWindowSize } from '../../hooks/useWindowSize';
-import { LAYOUT_MARGIN } from '../../../styleConstants';
-
 
 const contentFulQuery = graphql`
 query landingServices {
@@ -86,7 +84,7 @@ const LandingServices = () => {
                   allContentfulService.nodes.map((service, index) => {
                       const { paragraph: { paragraph }, image, heading } = service;
                       return (
-                        <Flex px={['0px']} textAlign="center" justifyContent="center" flexWrap='wrap'>
+                        <Flex textAlign="center" justifyContent="center" flexWrap='wrap'>
                           {
                               isEven(index) && isDesktop ? (
                                 <Fragment>
