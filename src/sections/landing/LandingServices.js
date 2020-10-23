@@ -39,7 +39,7 @@ const CardText = ({ heading, paragraph }) => (
       <Heading as="h3" color="primary" fontSize={[4]} pb={[4]}>
         {heading}
       </Heading>
-      <Text color="primary" pb={4}>
+      <Text as="p" color="primary" pb={4}>
         {paragraph}
       </Text>
     </Box>

@@ -35,15 +35,16 @@ const LandingPageAbout = () => (
             fontSize={5}
             as="h2"
             pb={4}
+            width={1}
           >
             Hi! I'm Amanda...
           </Heading>
-          <Text color="primary" pb={4}>
+          <Text as="p" color="primary" pb={4}>
             I help high achieving women particulary Nurses and other healthcare
             workers who are stressed out and struggling with weight gain, poor
             sleep, hormone issues and gut health and ready for real change.
           </Text>
-          <Text color="primary" pb={3}>
+          <Text as="p" color="primary" pb={3}>
             I believe education and knowledge is what empowers my clients to
             make long term positive changes towards optimal health.
           </Text>

@@ -31,7 +31,7 @@ const LandingPage = () => (
         <Heading as="h1" color="primary" fontSize={[5,6]} pt={[5, null]} pb={[4]}>
           Amanda Lane Naturopath
         </Heading>
-        <Text color="primary" fontSize={[2,3,4]} pb={3}>
+        <Text as="p" color="primary" fontSize={[2,3,4]} pb={3}>
         Amanda is a Sydney Based Naturopath and Nutrition coach offering online consultations from the comfort of your own home.
         </Text>
       </Flex>
