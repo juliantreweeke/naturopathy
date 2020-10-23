@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Flex } from 'rebass/styled-components';
+import { Image, Button, Flex } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
-import CrossIcon from '../../svgs/cross.svg';
+import CrossIcon from '../../svg/cross.svg';
+import Cross from '../../media/icons/cross.png';
 
 const MenuDropDown = ({ mobileMenuState, navLinks}) => {
   const {mobileMenuOpen, toggleMobileMenu} = mobileMenuState;
@@ -43,12 +44,22 @@ const MenuDropDown = ({ mobileMenuState, navLinks}) => {
               alignItems:"right",
               justifyContent:"flex-end"
             }}
-            > 
+              onClick={toggleMobileMenu}
+              style={{cursor:'pointer'}}
+            >   
+            <Image 
+              alt="close menu" src={Cross} 
+              onClick={toggleMobileMenu}
+              style={{cursor:'pointer', width:'100px'}}
+            />
+              {/*
+              TODO: Svg's are breaking in gatsby for some unknown reason
+              need to re instate svgs at a later date
               <CrossIcon 
                 onClick={toggleMobileMenu}
                 height={40}
                 style={{cursor:'pointer'}}
-              />
+              /> */}
             </Flex>
             {navLinks}     
           </Flex>

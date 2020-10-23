@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'rebass/styled-components';
-import Tippy from '@tippy.js/react';
+import { Image, Link } from 'rebass/styled-components';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import 'tippy.js/dist/tippy.css'; // eslint-disable-line
-import FacebookIcon from '../../svgs/facebook.svg';
+import FacebookIcon from '../../svg/facebook.svg';
 
 const IconLink = styled(Link)`
   transition: color 0.5s;
@@ -17,24 +16,33 @@ const IconLink = styled(Link)`
   }
 `;
 
-const SocialLink = ({  name, url, color }) => (
-  <Tippy content={name} placement="bottom" trigger="mouseenter" arrow={false}>
-    <IconLink
+const SocialLink = ({  name, url, color, image }) => {
+  
+ return (
+     <IconLink
       href={url}
       target="_blank"
       color={color}
       rel="noreferrer"
       aria-label={name}
-    > 
-      <FacebookIcon height={40} />
-    </IconLink>
-  </Tippy>
-);
+      px={1}
+    >   
+    <Image 
+      alt={name} src={image} 
+      style={{ width:'50px'}}
+    />  
+    
+      {/* TODO Gatsby SVG's are breaking for some reason
+      need to figure out why and replace with SVG's <FacebookIcon height={40} /> */}
+    </IconLink> 
+);}
 
 SocialLink.propTypes = {
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   color: PropTypes.string,
 };
 
 export default SocialLink;
+

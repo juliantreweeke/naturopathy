@@ -50,10 +50,6 @@ const links = [
     title: 'ABOUT',
     link: 'about'
   },
-  // {
-  //   title: 'BLOG',
-  //   link:'blog'
-  // },
   {
     title: 'BOOKINGS',
     link: 'bookings'
@@ -66,13 +62,16 @@ const Layout = ({ children }) => {
 
   const toggleMobileMenu = () => setMobileMenu(!mobileMenuOpen);
 
+  const mobileMenuState = {mobileMenuOpen, toggleMobileMenu};
+  console.log(mobileMenuState);
+
   return (
     <main>
       <GlobalStyle mobileMenuOpen={mobileMenuOpen} />
       <ThemeProvider theme={theme}>
         <ScrollingProvider>
           <Helmet />
-          <Header mobileMenuState={{mobileMenuOpen, toggleMobileMenu}} links={links} />
+          <Header mobileMenuState={mobileMenuState} links={links} />
           {children}
           <Footer />
         </ScrollingProvider>

@@ -12,12 +12,13 @@ import { LAYOUT_MARGIN } from '../../styleConstants';
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
-    background: ${(props) => props.theme.colors.white};
+    background: white;
   }
-  background:${(props) => props.theme.colors.white};;
+  background: white;
   position: relative;
   width: 100%;
-  height:80px;
+  height:100px;
+  margin-bottom:60px;
 `;
 
 const CTA = ({ link, title }) => (
@@ -40,33 +41,37 @@ const Header = ({ links, mobileMenuState }) => {
   return (
     <HeaderContainer>
       <Fade top>
-        <Box
-          as="nav"
-          flexWrap="wrap"
-          justifyContent="space-between"
-          alignItems="center"
-          p={3}
-          mx={[0, 0, LAYOUT_MARGIN]}
-          role="navigation"
-          display={['none','flex']}
-        > 
-          {Logo}
-          <Flex as='ul' mr={[0, 3, 5]}>{navLinks}</Flex> 
-          <CTA link="bookings" title="BOOK NOW" />
-        </Box>
-        <Box
-          as="nav"
-          flexWrap="wrap"
-          justifyContent="space-between"
-          alignItems="center"
-          p={3}
-          mx={[0, 0, LAYOUT_MARGIN]}
-          role="navigation"
-          display={['flex','none']}
+        <Box width={1}
+          bg="white"
         >
-          {Logo}
-          <MenuDropDown navLinks={navLinks} mobileMenuState={mobileMenuState} />
-          <CTA link="bookings" title="BOOK NOW" />
+          <Box
+            as="nav"
+            flexWrap="wrap"
+            justifyContent="space-between"
+            alignItems="center"
+            p={3}
+            mx={[0, 0, LAYOUT_MARGIN]}
+            role="navigation"
+            display={['none','none', 'flex']}
+          > 
+            {Logo}
+            <Flex as='ul' mr={[0, 3, 5]}>{navLinks}</Flex> 
+            <CTA link="bookings" title="BOOK NOW" />
+          </Box>
+          <Box
+            as="nav"
+            flexWrap="wrap"
+            justifyContent="space-between"
+            alignItems="center"
+            p={3}
+            mx={[0, 0, LAYOUT_MARGIN]}
+            role="navigation"
+            display={['flex','flex', 'none']}
+          >
+            {Logo}
+            <MenuDropDown navLinks={navLinks} mobileMenuState={mobileMenuState} />
+            <CTA link="bookings" title="BOOK NOW" />
+          </Box>
         </Box>
       </Fade>
     </HeaderContainer>

@@ -1,38 +1,17 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Image } from 'rebass/styled-components';
+import LogoImage from '../../media/images/logo2.png'
 
-const contentFulQuery = graphql`
-query logoQuery {
-  allContentfulAbout {
-    nodes {
-      profile {
-        file {
-          url
-        }
-      }
-    }
-  }
-}
-`
 const Logo = (
-  <StaticQuery
-    query={contentFulQuery}
-    render={({ allContentfulAbout }) => {
-        const { profile } = allContentfulAbout.nodes[0];
-        return (
-          <Image
-            src={profile.file.url}
-            width="50px"
-            alt="Amanda Lane Logo"
-            style={{
-              cursor: 'pointer',
-            }}
-          />
-        );
-      }}
+  <Image
+    src={LogoImage}
+    width="200px"
+    alt="Amanda Lane Logo"
+    style={{
+      cursor: 'pointer',
+    }}
   />
 );
 
-
-export default Logo
+export default Logo;
