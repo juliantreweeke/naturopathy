@@ -7,7 +7,7 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import Service1 from '../../../media/images/service1.jpg';
 import Service2 from '../../../media/images/service2.jpg';
 import Service3 from '../../../media/images/service3.jpg';
-import Service4 from '../../../media/images/Service4.jpg';
+import Service4 from '../../../media/images/service4.jpg';
 
 const isEven = (num) => {
   return num % 2 === 0;
