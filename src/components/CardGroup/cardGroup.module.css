@@ -1,0 +1,18 @@
+@import '../../styles/variables.css';
+
+.cardGroup-container {
+  background: var(--background-color-secondary);
+}
+
+.cardGroup {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5rem;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+@media (min-width: 63rem) {
+  .cardGroup { grid-template-columns: repeat(3, 1fr); }
+}

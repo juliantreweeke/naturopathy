@@ -48,12 +48,9 @@ const CallToAction = () => (
               alignSelf: 'flex-end',
             }}
           >
-            {/* <Link style={{ color: 'white' }} to="/bookings">
+            <Link style={{ color: 'white' }} to="/7-day-meal-plan">
               GET NOW
-            </Link> */}
-            <a style={{ color: 'white' }} target="_blank" href="https://amandalaneux.ac-page.com/7-day-meal-plan?test=true">
-              GET NOW
-            </a>
+            </Link>
           </Button>
         </Flex>
         <Box bg="background" width={[0, 2 / 5]}>

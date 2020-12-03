@@ -1,0 +1,28 @@
+@import '../../styles/variables.css';
+
+.columnLayout {
+    display: grid;
+    background-color:var(--background-color);
+    padding:56px 0;
+    margin-bottom: 56px;
+}
+
+.column {
+    margin: auto 36px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--heading-color-secondary);
+}
+
+
+@media (min-width: 52rem) {
+    .columnLayout {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+    .columnLayout {
+        grid-template-columns: repeat(2, 1fr);;
+    }
+}

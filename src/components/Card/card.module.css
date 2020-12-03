@@ -1,0 +1,45 @@
+@import "../../styles/variables.css";
+
+.card {
+  animation: fadeIn 1s ease-in;
+  position: relative;
+}
+
+.cardImage {
+  width:100%;
+  transition: all .45s ease-in-out;
+}
+
+@media (min-width: 63rem) {
+  .cardImage {
+    min-height: 206px;
+  }
+}
+
+.cardLink {
+  cursor: pointer;
+  color: var(--font-color-dark);
+}
+
+.description {
+    text-align: center;
+}
+
+.heading {
+  padding: 8px;
+  animation: fadeIn 1s steps(80, end);
+  text-align: center;
+  margin:0px;
+  transition: all .45s ease-in-out;
+  color: var(--heading-color-secondary);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
