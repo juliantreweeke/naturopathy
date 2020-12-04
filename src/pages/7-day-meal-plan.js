@@ -20,7 +20,7 @@ const SignupForm = () => {
   useScript('https://amandalaneux.activehosted.com/f/embed.php?id=1');
   return (
   <>
-    <div class="_form_1"></div>
+    <div className="_form_1"></div>
   </>
 );}
 
