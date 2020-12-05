@@ -1,0 +1,65 @@
+@import '../../styles/variables.css';
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav img {
+      margin-left: 20px;
+  }
+
+  .navItem {
+    font-size: 1.8rem;
+    min-height: 75px;
+  }
+
+  .navItem a {
+    color: var(--nav-link)
+  }
+
+  .navList {
+      display:none;
+  }
+
+  .navListMobile {
+    position: fixed;
+    top: 100px;
+    width:100vw;
+    height:100vh;
+    background-color:  var(--background-color-secondary);
+  }
+
+  .navListMobile .navItem {
+    font-size: 2rem;
+  }
+
+  .navListMobile[data-is-menu-open="false"]  {
+    display:none;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .navListMobile[data-is-menu-open="true"]  {
+    display:block;
+  }
+  
+
+@media (min-width: 1000px) {
+    .nav {
+      grid-template-columns: auto auto;
+      justify-items: start;
+    }
+    .navList {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 3.2rem;    
+        line-height: 75px;         
+    }
+
+    .navListMobile, .navListMobile[data-is-menu-open="true"] {
+      display: none;
+    }
+
+}
+

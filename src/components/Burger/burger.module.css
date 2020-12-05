@@ -1,0 +1,75 @@
+@import '../../styles/variables.css';
+
+.burger {
+  z-index: 9999;
+  cursor: pointer;
+  padding: 5px 20px;
+  background-color: transparent;
+  display: block;
+  border:none;
+  overflow: hidden;
+}
+
+.burger:focus {
+  outline: 0;
+}
+
+.burger[data-is-menu-open="true"] > .burgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(12px, 2px);
+  width: 37px;
+}
+
+.burger[data-is-menu-open="true"] > .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[data-is-menu-open="true"] > .burgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(12px, -2px);
+  width: 37px;
+}
+
+.burger[data-is-menu-open="true"] > .burgerLine {
+  background-color: var(--nav-link);
+}
+
+.burgerLine {
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin: 8px;
+  opacity: 100;
+  background-color: var(--nav-link);
+  transition: all 0.45s cubic-bezier(0.43, 0.77, 0.15, 1.5);
+}
+
+@media (hover: hover) {
+  .burger:hover > .burgerLine {
+    background-color: var(--hover-color);
+  }
+
+  .burger[data-is-menu-open="true"]:hover > .burgerLine {
+    background-color: var(--hover-color-secondary);
+  }
+
+  .burger[data-is-menu-open="true"]:hover > .burgerLine:nth-child(1) {
+    transform: rotate(48deg) translate(12px, 2px);
+  }
+
+  .burger[data-is-menu-open="true"]:hover > .burgerLine:nth-child(3) {
+    transform: rotate(-48deg) translate(12px, -2px);
+  }
+
+  .burger[data-is-menu-open="false"]:hover > .burgerLine:nth-child(1) {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  .burger[data-is-menu-open="false"]:hover > .burgerLine:nth-child(3) {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+@media (min-width: 1000px) {
+  .burger {
+    display: none;
+  }
+}

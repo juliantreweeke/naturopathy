@@ -6,23 +6,34 @@
     --color-off-white: #F3F7F8;
     --color-light-blue: #7CB4B8;
     --color-orange: #ea9f5e;
+    --color-brown: #6b5858;
     --font-color-primary: var();
     --font-color-secondary: var();
     --font-color-dark: var(--color-black);
     --primary-color: var(--color-grey);
     --secondary-color: var();
     --highlight-color: var();
-    --hover-color: var();
-    --hover-color-secondary: var();
+    --hover-color: var(--color-orange);
+    --hover-color-secondary: var(--color-light-blue);
     --background-color: var(--color-off-white);
     --background-color-secondary: var(--color-white);
     --button-color-primary: var(--color-orange);
     --responsive-padding: 1rem;
     --heading-color-secondary: var(--color-light-blue);
+    --nav-link: var(--color-brown);
 }
 
-@media (min-width: 576px) {                             
-    :root {
-      --responsive-padding: 2rem;
-    }
-}
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

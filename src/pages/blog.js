@@ -1,13 +1,13 @@
 import React from 'react';
-import Layout from '../components/Layout';
-
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import App from '../components/App/Index';
 
 const BlogPage = () => (
-  <Layout>
-    BLOG
-  </Layout>
+  <App>
+    <section className="full">
+      Coming soon
+
+    </section>
+  </App>
 );
 
 export default BlogPage;
