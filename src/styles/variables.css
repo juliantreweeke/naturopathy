@@ -4,36 +4,22 @@
     --color-grey:#7E7F83;
     --color-white:#FFFFFF;
     --color-off-white: #F3F7F8;
-    --color-light-blue: #7CB4B8;
+    --color-light-blue: #f7fcff; 
+    --color-blue: #7CB4B8; 
     --color-orange: #ea9f5e;
     --color-brown: #6b5858;
-    --font-color-primary: var();
-    --font-color-secondary: var();
+    --font-color-primary: var(--color-brown);
+    --font-color-secondary: var(--color-white);
     --font-color-dark: var(--color-black);
-    --primary-color: var(--color-grey);
-    --secondary-color: var();
-    --highlight-color: var();
     --hover-color: var(--color-orange);
     --hover-color-secondary: var(--color-light-blue);
     --background-color: var(--color-off-white);
     --background-color-secondary: var(--color-white);
     --button-color-primary: var(--color-orange);
-    --responsive-padding: 1rem;
+    --heading-color-primary: var(--color-brown);
     --heading-color-secondary: var(--color-light-blue);
+    --heading-color-light: var(--color-white);
+    --link-color-light: var(--color-white);
+    --link-color-light-hover: var(--color-orange);
     --nav-link: var(--color-brown);
 }
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}

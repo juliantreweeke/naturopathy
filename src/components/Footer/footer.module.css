@@ -1,0 +1,17 @@
+@import '../../styles/variables.css';
+
+  .footer {
+    text-align: center;
+    margin: auto;
+  }
+
+  .footer .link img {
+    width:50px;
+    padding:20px;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }

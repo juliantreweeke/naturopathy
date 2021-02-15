@@ -1,0 +1,28 @@
+@import '../../styles/variables.css';
+
+.imageTextBlock {
+    background-color: var(--color-light-blue);
+    display: flex;
+    margin:auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.imageTextBlock p {
+    max-width: 400px;
+}
+
+.imageTextBlockContent {
+    display: grid;
+    justify-items: center;
+    /* JULIAN */
+    /* padding: 40px; */
+    margin:auto;
+}
+
+.imageTextBlock img {
+    max-width: 358px;
+    /* JULIAN */
+    /* padding: 40px; */
+    margin:auto;
+}

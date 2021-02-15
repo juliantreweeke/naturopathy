@@ -35,7 +35,7 @@ const CallToAction = () => (
           <Heading as="h2" color="primary" fontSize={[4,5]} pb={[2, 3, 4]}>
             YOUR FREE EBOOK ‘BURNOUT PROOF YOUR BODY’
           </Heading>
-          <Text as="p" color="primary" fontSize={[2, 3, 4]} pb={[4]}>
+          <Text as="p" color="primary" pb={[4]}>
             Free 7-day meal plan complete with shopping list, and meal plan.
             Sugar free, gluten free and gauaranteed to support your body.
           </Text>

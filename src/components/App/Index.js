@@ -1,38 +1,13 @@
 import React, { useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
+import Footer from '../Footer/Index';
 import Header from '../Header/Index';
 import Helmet from '../Helmet';
+import Headroom from 'react-headroom';
 import './app.css'
+import { links, socialMediaLinks} from '../../navigation';
 
-const links = [
-  {
-    title: 'HOME',
-    link: '',
-  },
-  {
-    title: 'ABOUT',
-    link: 'about',
-  },
-  {
-    title: 'WORK WITH ME',
-    link: 'work-with-me',
-  },
-  {
-    title: 'BOOKINGS',
-    link: 'bookings',
-  },
-  {
-    title: 'BLOG',
-    link: 'blog',
-  },
-  {
-    title: 'CONTACT',
-    link: 'contact',
-  },
-];
-
-const App = ({ children }) => {
+const App = ({ children, fullWidth }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenuOpen = () => {
@@ -40,18 +15,24 @@ const App = ({ children }) => {
   }
 
   return (
-    <div id="app">
+    <div id="app" data-is-menu-open={isMenuOpen} data-full-width={fullWidth}>
       <Helmet />
-      <Header links={links} isMenuOpen={isMenuOpen}
-        toggleMenuOpen={toggleMenuOpen}>yo</Header>
+      <Headroom>
+        <Header 
+          links={links} 
+          isMenuOpen={isMenuOpen}
+          toggleMenuOpen={toggleMenuOpen}
+        />
+      </Headroom>
       <main>{children}</main>
-      <footer>yo</footer>
+      <Footer links={socialMediaLinks}/>
     </div>
   );
 };
 
 App.propTypes = {
   children: PropTypes.node.isRequired,
+  fullWidth: PropTypes.bool
 };
 
 export default App;

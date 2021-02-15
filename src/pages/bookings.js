@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import App from '../components/App';
 
 const Bookings = () => {
  return (
-   <Layout>
+   <App>
      <iframe 
        src="https://app.acuityscheduling.com/schedule.php?owner=19233061" 
        title="Schedule Appointment" 
@@ -11,7 +11,7 @@ const Bookings = () => {
        height="800" 
        frameBorder="0"
      />
-   </Layout>
+   </App>
   );
 } 
 

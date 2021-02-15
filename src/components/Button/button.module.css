@@ -1,0 +1,23 @@
+@import '../../styles/variables.css';
+
+.button {
+  background: var(--button-color-primary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--font-color-secondary);
+  border-radius: 4px;
+  padding: 4px 0px;
+  border: none;
+  margin-bottom: 20px;
+  width: 80%;
+
+}
+
+@media (min-width: 1000px) {
+  .button {
+    width: auto;
+    padding: 8px 97px;
+  }
+}

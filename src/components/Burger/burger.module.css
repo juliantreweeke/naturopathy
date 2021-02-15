@@ -3,11 +3,11 @@
 .burger {
   z-index: 9999;
   cursor: pointer;
-  padding: 5px 20px;
   background-color: transparent;
   display: block;
   border:none;
   overflow: hidden;
+  margin-right: 5px;
 }
 
 .burger:focus {
@@ -48,7 +48,7 @@
   }
 
   .burger[data-is-menu-open="true"]:hover > .burgerLine {
-    background-color: var(--hover-color-secondary);
+    background-color: var(--hover-color);
   }
 
   .burger[data-is-menu-open="true"]:hover > .burgerLine:nth-child(1) {

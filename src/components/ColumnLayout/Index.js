@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 import React from "react";
 import styles from "./columnLayout.module.css";
 
-const ColumnLayout = (props) => {
+const ColumnLayout = ({left, right, style}) => {
   return (
-    <div className={styles.columnLayout}>
+    <div style={style} className={styles.columnLayout}>
       <section className={styles.column}>
-        {props.left}
+        {left}
       </section>
       <section className={styles.column}>
-        {props.right}
+        {right}
       </section>
       </div>
   )

@@ -1,0 +1,51 @@
+@import '../../styles/variables.css';
+
+.banner {
+  animation: fadeIn 1s ease-in;
+  height: 458px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 16px;
+  background: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    var(--background-url);
+  background-size: cover;
+}
+
+.banner h1 {
+  padding: 20px;
+}
+
+.banner a {
+  color: var(--link-color-light);
+  border: solid 1px var(--link-color-light);
+  width: 80%;
+  max-width: 334px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner a:hover {
+  color: var(--link-color-light-hover);
+  border: solid 1px var(--link-color-light-hover);
+}
+
+@media (min-width: 1000px) {
+  .imageTextBlock div {
+    margin-left: 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}

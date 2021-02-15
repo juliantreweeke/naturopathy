@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'plugin:cypress/recommended'],
+  extends: ['airbnb', 'prettier', 'plugin:cypress/recommended', 'plugin:react-hooks/recommended'],
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',

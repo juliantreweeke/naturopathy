@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { MOBILE_BREAKPOINT } from '../../styleConstants';
-/* eslint-disable import/prefer-default-export */
 
 export const useWindowSize = () => {
   const isClient = typeof window === 'object';

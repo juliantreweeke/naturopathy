@@ -1,14 +1,21 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import App from '../components/App';
 import CardGroup from '../components/CardGroup/Index';
 import ColumnLayout from '../components/ColumnLayout/Index';
 import useScript from '../hooks/useScript';
+import Heading from '../components/Heading/Index';
 
 import { BurnOutProofData } from '../data';
 
+const customStyles = {
+  'backgroundColor': '#F3F7F8',
+}
+
 const Headline = () => (
-  <>
-    <h1>7 day meal plan to support you through times of stress.</h1>
+  <> 
+    <Heading headingLevel="h1" variant="blue">
+      7 day meal plan to support you through times of stress.
+    </Heading>
     <p>
       Plant based, sugar free, gluten free, high in essential vitamins and
       minerals.
@@ -25,10 +32,10 @@ const SignupForm = () => {
 );}
 
 const MealPlan = () => (
-  <Layout>
-    <ColumnLayout left={<Headline />} right={<SignupForm />} />
-    <CardGroup cards={BurnOutProofData.benefits} />
-  </Layout>
+  <App>
+    <ColumnLayout style={customStyles} left={<Headline />} right={<SignupForm />} />
+    <CardGroup cardVariant="blue" cards={BurnOutProofData.benefits} headingLevel="h2" />
+  </App>
 );
 
 export default MealPlan;

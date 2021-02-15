@@ -2,35 +2,37 @@
 
 .columnLayout {
     display: grid;
-    background-color:var(--background-color);
     margin-bottom: 56px;
     justify-content: center;
     overflow-x:hidden;
 }
 
+.columnLayout section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    align-self: flex-start;
+}
+
 .column {
-    padding:0% 15%;
+    padding:0% 5%;
 }
 
-
-h1 {    
-    padding-top:40px;
-    font-size: 2.2rem;
-    color: var(--heading-color-secondary);
+.columnLayout img {
+    width: 70%;
+    margin:0 auto;
 }
-
 
 @media (min-width: 62rem) {
-    .columnLayout {
-        padding-left: 85px;
-        padding-right: 85px;
-    }
     .columnLayout {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-
     .column {
-        margin: auto;
+        margin:0 auto;
+    }
+    .columnLayout img {
+        width: 80%;
     }
 }

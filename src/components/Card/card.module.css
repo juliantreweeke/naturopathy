@@ -3,37 +3,35 @@
 .card {
   animation: fadeIn 1s ease-in;
   position: relative;
+  border: solid 1px #979797;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cardText {
+  padding: 10px 20px;
+  text-align: left;
 }
 
 .cardImage {
-  width:100%;
+  width: 100%;
+  max-width: 855px;
+  max-height: 380px;
   transition: all .45s ease-in-out;
 }
 
 @media (min-width: 63rem) {
   .cardImage {
-    min-height: 206px;
+    height: 251px;
+    width: 441px;
   }
 }
 
 .cardLink {
+  display: block;
   cursor: pointer;
   color: var(--font-color-dark);
+  height: 100%;
 }
-
-.description {
-    text-align: center;
-}
-
-.heading {
-  padding: 8px;
-  animation: fadeIn 1s steps(80, end);
-  text-align: center;
-  margin:0px;
-  transition: all .45s ease-in-out;
-  color: var(--heading-color-secondary);
-}
-
 
 @keyframes fadeIn {
   from {
