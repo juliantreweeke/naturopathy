@@ -80,25 +80,26 @@ const Home = ({ data }) => {
       <SignUpForm />
     </ImageTextBlock> */}
         <Container>
-          <ImageTextBlock imageLeft={MeditationImage}>
-            <Heading headingLevel="h2" style={{ fontSize: '3.4rem' }}>
-              Reduce stress, improve your sleep, loose weight, feel yourself
-              again..
-            </Heading>
-            <p>
-              I help high acheiving women particulary Nurses and other
-              healthcare workers who are stressed out and struggling with weight
-              gain, poor sleep, hormone issues and gut health and ready for real
-              change.
-            </p>
-            <p>
-              I believe education and knowledge is what empowers my clients to
-              make long term positive changes towards optimal health.
-            </p>
-          </ImageTextBlock>
+          <Stack gutter="44">
+            <ImageTextBlock imageLeft={MeditationImage}>
+              <Heading centered headingLevel="h2" style={{ fontSize: '2.4rem' }}>
+                Reduce stress, improve your sleep, <br/> loose weight, feel yourself
+                again..
+              </Heading>
+              <p>
+                I help high acheiving women particulary Nurses and other
+                healthcare workers who are stressed out and struggling with
+                weight gain, poor sleep, hormone issues and gut health and ready
+                for real change.
+              </p>
+              <p>
+                I believe education and knowledge is what empowers my clients to
+                make long term positive changes towards optimal health.
+              </p>
+            </ImageTextBlock>
 
-          {/* TODO Replace with real data */}
-          {/* <section className="full">
+            {/* TODO Replace with real data */}
+            {/* <section className="full">
             <Heading headingLevel="h2" style={{ fontSize: '3.4rem' }}>
               Are you ready to feel stress free and full of energy again?
             </Heading>
@@ -110,27 +111,28 @@ const Home = ({ data }) => {
             />
           </section> */}
 
-          <ImageTextBlock imageRight={MealPlanImage}>
-            <Heading headingLevel="h2" style={{ fontSize: '3.4rem' }}>
-              Have you signed up for your free meal plan?
-            </Heading>
-            <p>
-              7 day meal plan to burn-out proof your body! Complete with planner
-              and shopping lists.
-            </p>
-            <IFrameSignUpForm />
-          </ImageTextBlock>
-          <section className="full">
-            <Heading headingLevel="h2" style={{ fontSize: '3.4rem' }}>
-              From the blog
-            </Heading>
-            <CardGroup
-              cardGroupVariant
-              cardVariant="black"
-              cards={blogPosts}
-              headingLevel="h2"
-            />
-          </section>
+            <ImageTextBlock imageRight={MealPlanImage}>
+              <Heading headingLevel="h2" style={{ fontSize: '3.4rem' }}>
+                Have you signed up for your free meal plan?
+              </Heading>
+              <p>
+                7 day meal plan to burn-out proof your body! Complete with
+                planner and shopping lists.
+              </p>
+              <IFrameSignUpForm />
+            </ImageTextBlock>
+            <section>
+              <Heading centered headingLevel="h2" style={{ fontSize: '3.4rem' }}>
+                From the blog
+              </Heading>
+              <CardGroup
+                cardGroupVariant
+                cardVariant="black"
+                cards={blogPosts}
+                headingLevel="h2"
+              />
+            </section>
+          </Stack>
         </Container>
       </Stack>
     </App>

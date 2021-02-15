@@ -10,6 +10,10 @@
     padding: 20px;
 }
 
+.heading[data-centered] {
+  text-align: center;
+}
+
 .heading[data-variant="blue"]  {
     color: var(--color-blue);
 }
