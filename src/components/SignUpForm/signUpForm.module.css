@@ -1,19 +1,19 @@
 @import '../../styles/variables.css';
 
 .form {
-    text-align: left;
-    display: inline;
+  text-align: left;
+  display: inline;
 }
 
 .formInput {
-    box-sizing: border-box;
-    display:inline-block;
-    padding:12px 10px;
-    line-height:140%;
-    width: 100%;
-    max-width: 636px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 10px;
+  line-height: 140%;
+  width: 100%;
+  max-width: 636px;
 }
 
 .formLabel {
- text-align: left;
+  text-align: left;
 }

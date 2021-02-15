@@ -69,16 +69,28 @@ const BlogPost = ({ data }) => {
     <App>
       <section className={styles.blogPost}>
         <Banner backgroundImage={contentfulBlogPost.image.file.url}>
-          <Heading headingLevel="h1" variant="white" style={{ fontSize: '5.2rem' }}>
+          <Heading
+            headingLevel="h1"
+            variant="white"
+            style={{ fontSize: '5.2rem' }}
+          >
             {contentfulBlogPost.heading}
           </Heading>
         </Banner>
         <div className={styles.post}>
-          <Heading headingLevel="h2" variant="black" style={{ fontSize: '1.8rem' }}>
+          <Heading
+            headingLevel="h2"
+            variant="black"
+            style={{ fontSize: '1.8rem' }}
+          >
             {contentfulBlogPost.heading}
           </Heading>
           {documentToReactComponents(contentfulBlogPost.post.json, options)}
-          <Heading headingLevel="h3" variant="black" style={{ fontSize: '1.8rem' }}>
+          <Heading
+            headingLevel="h3"
+            variant="black"
+            style={{ fontSize: '1.8rem' }}
+          >
             References
           </Heading>
           {documentToReactComponents(
@@ -87,12 +99,21 @@ const BlogPost = ({ data }) => {
           )}
         </div>
         <div className={styles.readMore}>
-          <Heading headingLevel="h2" variant="black" style={{ fontSize: '2.4rem' }}>
+          <Heading
+            headingLevel="h2"
+            variant="black"
+            style={{ fontSize: '2.4rem' }}
+          >
             Read More
           </Heading>
         </div>
 
-        <CardGroup cardGroupVariant cardVariant="black" cards={blogPosts} headingLevel="h3" />
+        <CardGroup
+          cardGroupVariant
+          cardVariant="black"
+          cards={blogPosts}
+          headingLevel="h3"
+        />
       </section>
     </App>
   );

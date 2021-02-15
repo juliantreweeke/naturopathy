@@ -23,16 +23,6 @@ const fillerCourseData = [
   { heading: 'Personalised Meal Plans', image: FillerImage, route: '/' },
 ];
 
-//TODO replace this with custom SignUpForm component
-// const SignUpForm = () => {
-//   useScript(ACTIVE_CAMPAIGN_IFRAME_FORM);
-//   return (
-//     <>
-//       <div className="_form_1"></div>
-//     </>
-//   );
-// };
-
 export const homeBlogQuery = graphql`
   query HomeBlogQuery {
     allContentfulBlogPost(sort: { fields: createdAt, order: DESC }) {
@@ -82,9 +72,13 @@ const Home = ({ data }) => {
         <Container>
           <Stack gutter="44">
             <ImageTextBlock imageLeft={MeditationImage}>
-              <Heading centered headingLevel="h2" style={{ fontSize: '2.4rem' }}>
-                Reduce stress, improve your sleep, <br/> loose weight, feel yourself
-                again..
+              <Heading
+                centered
+                headingLevel="h2"
+                style={{ fontSize: '2.4rem' }}
+              >
+                Reduce stress, improve your sleep, <br /> loose weight, feel
+                yourself again..
               </Heading>
               <p>
                 I help high acheiving women particulary Nurses and other
@@ -122,7 +116,11 @@ const Home = ({ data }) => {
               <IFrameSignUpForm />
             </ImageTextBlock>
             <section>
-              <Heading centered headingLevel="h2" style={{ fontSize: '3.4rem' }}>
+              <Heading
+                centered
+                headingLevel="h2"
+                style={{ fontSize: '3.4rem' }}
+              >
                 From the blog
               </Heading>
               <CardGroup

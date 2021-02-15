@@ -11,6 +11,7 @@ const SignUpForm = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  //TODO Replace with request to Netlify Function to do Post Request
   const requestEmailSignUp = async (e) => {
     const body = inputs;
     setError(null);

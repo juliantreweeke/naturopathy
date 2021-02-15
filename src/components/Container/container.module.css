@@ -1,13 +1,13 @@
 @import '../../styles/variables.css';
 
 .container {
-    padding: 0% 10%;
-    background-color: var(--color-light-blue)
+  padding: 0% 10%;
+  background-color: var(--color-light-blue);
 }
 
 /* above iPhone 5 width */
 @media (min-width: 321px) {
-    .container {
-        padding: 0% 5%;
-    }
+  .container {
+    padding: 0% 5%;
+  }
 }

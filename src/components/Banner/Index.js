@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './banner.module.css';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 const Banner = ({ backgroundImage, children, route, linkText }) => {
-  const style = {"--background-url": `url(${backgroundImage})`};
+  const style = { '--background-url': `url(${backgroundImage})` };
   return (
-    <section
-      style={style}
-      className={styles.banner}
-    > 
+    <section style={style} className={styles.banner}>
       {children}
       {route && <Link to={`/${route}`}>{linkText}</Link>}
     </section>

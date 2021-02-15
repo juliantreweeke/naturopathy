@@ -5,7 +5,13 @@ import { Link } from 'gatsby';
 
 const Button = ({ children, variant, ...props }) => {
   const HyperLinkButton = (
-    <a href={props.href} className={styles.button} data-variant={variant}>
+    <a
+      href={props.href}
+      className={styles.button}
+      data-variant={variant}
+      target="_blank"
+      rel="noopener noreferrer"
+    > 
       {children}
     </a>
   );
@@ -19,18 +25,18 @@ const Button = ({ children, variant, ...props }) => {
   const StandardButton = (
     <button {...props} className={styles.button} data-variant={variant}>
       {children}
-    </button> 
+    </button>
   );
-  
-  if (props.href){
-    return HyperLinkButton
+
+  if (props.href) {
+    return HyperLinkButton;
   }
 
-  if (props.to){
-    return LinkButton
+  if (props.to) {
+    return LinkButton;
   }
-  
-  return StandardButton
+
+  return StandardButton;
 };
 
 Button.propTypes = {

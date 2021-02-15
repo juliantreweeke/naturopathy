@@ -3,10 +3,10 @@
 .cardGroup-container {
   background: var(--background-color-secondary);
   max-width: 1200px;
-  margin: auto
+  margin: auto;
 }
 
-.cardGroup-container[data-variant="true"] { 
+.cardGroup-container[data-variant='true'] {
   max-width: 900px;
 }
 
@@ -19,24 +19,22 @@
 }
 
 @media (min-width: 63rem) {
-  .cardGroup { 
-    grid-template-columns: repeat(3, 1fr); 
+  .cardGroup {
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 85px;
     min-width: 442px;
   }
 
-  .cardGroup[data-variant="true"]  { 
-    grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+  .cardGroup[data-variant='true'] {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     padding: 0px;
   }
 
-  .cardGroup[data-variant="true"] > div  { 
+  .cardGroup[data-variant='true'] > div {
     min-height: 369px;
   }
 
-  .cardGroup[data-variant="true"] > img  { 
+  .cardGroup[data-variant='true'] > img {
     min-height: 248px;
   }
-
 }
-

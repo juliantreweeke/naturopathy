@@ -1,43 +1,36 @@
 @import '../../styles/variables.css';
 
 .heading {
-    color: var(--heading-color-primary);
-    transition: all .45s ease-in-out;
-    animation: fadeIn 1s steps(80, end);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 647px;
-    padding: 20px;
+  color: var(--heading-color-primary);
+  transition: all 0.45s ease-in-out;
+  animation: fadeIn 1s steps(80, end);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 647px;
+  padding: 20px;
 }
 
 .heading[data-centered] {
   text-align: center;
 }
 
-.heading[data-variant="blue"]  {
-    color: var(--color-blue);
+.heading[data-variant='blue'] {
+  color: var(--color-blue);
 }
 
-.heading[data-variant="black"]  {
+.heading[data-variant='black'] {
   color: var(--font-color-dark);
 }
 
-.heading[data-variant="white"]  {
+.heading[data-variant='white'] {
   color: var(--heading-color-light);
 }
 
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100;
-    }
-}
-/* 
-@media (min-width: 550px) {
-  .heading {
-    max-width: 647px;
-    padding: 20px;
+  from {
+    opacity: 0;
   }
-} */
+  to {
+    opacity: 100;
+  }
+}

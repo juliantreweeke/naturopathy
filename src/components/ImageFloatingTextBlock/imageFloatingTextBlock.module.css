@@ -1,58 +1,57 @@
 @import '../../styles/variables.css';
 
 .container {
-    display: grid;
+  display: grid;
 }
 
 .content {
-    max-height: 100vh;
-    position: relative; 
-    margin-bottom: -20px;
+  max-height: 100vh;
+  position: relative;
+  margin-bottom: -20px;
 }
 
 .content img {
-    overflow: hidden;
-    position: relative; 
-    width: 100%;
-    object-fit: cover;
-    object-position: 54% 55%;
-    height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  object-position: 54% 55%;
+  height: 100vh;
 }
 
 .content p {
-    padding: 0% 5%;
+  padding: 0% 5%;
 }
 
 .floatingTextBlockContainer {
-   display: flex;
-   position: relative; 
-   background: white;
-   opacity: 0.8;
-   text-align: center;
-   max-width: 400px;
-   margin:auto;
-   bottom: 60%;
-   left: 0%;
+  display: flex;
+  position: relative;
+  background: white;
+  opacity: 0.8;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  bottom: 60%;
+  left: 0%;
 }
 
-
 .floatingTextBlock {
-    margin: 20px 30px;
-    width: 100%;
+  margin: 20px 30px;
+  width: 100%;
 }
 
 .floatingTextBlock h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 1200px) {
-    .container img  {
-        object-position: 54% 37%;
-    }
+  .container img {
+    object-position: 54% 37%;
+  }
 
-    .floatingTextBlockContainer {
-        bottom: 70%;
-        left: 68%;
-        margin: inherit;
-    }
+  .floatingTextBlockContainer {
+    bottom: 70%;
+    left: 68%;
+    margin: inherit;
+  }
 }

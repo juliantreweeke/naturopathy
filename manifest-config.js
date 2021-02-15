@@ -5,5 +5,5 @@ module.exports = {
   background_color: '#F3F7F8',
   theme_color: '#6b5858',
   display: 'minimal-ui',
-  icon: './media/icons/cross.png',
+  icon: './media/icons/leaf.png',
 };

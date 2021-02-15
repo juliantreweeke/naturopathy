@@ -2,21 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './imageTextBlock.module.css';
 
-const ImageTextBlock = ({ children, imageLeft, imageRight}) => {
+const ImageTextBlock = ({ children, imageLeft, imageRight }) => {
   return (
     <section
       className={styles.imageTextBlock}
       style={{
-        flexWrap: imageRight ? 'wrap-reverse' : 'wrap'
+        flexWrap: imageRight ? 'wrap-reverse' : 'wrap',
       }}
-    > 
-      { imageLeft &&  <img src={imageLeft}/>}
-      <div
-        className={styles.imageTextBlockContent}
-      > 
-        {children}
-      </div>
-      {imageRight &&  <img src={imageRight}/>}
+    >
+      {imageLeft && <img src={imageLeft} />}
+      <div className={styles.imageTextBlockContent}>{children}</div>
+      {imageRight && <img src={imageRight} />}
     </section>
   );
 };

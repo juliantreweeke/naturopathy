@@ -4,6 +4,7 @@ import styles from './card.module.css';
 import { Link } from 'gatsby';
 import Heading from '../Heading/Index';
 
+// TODO Remove this and fix up Heading component with a new variant
 const headingStyles = {
   padding: '8px 0px',
   margin:'0px',

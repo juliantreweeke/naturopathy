@@ -1,24 +1,24 @@
 @import '../../styles/variables.css';
 
 .imageTextBlock {
-    background-color: var(--color-light-blue);
-    display: flex;
-    margin:auto;
-    justify-content: center;
+  background-color: var(--color-light-blue);
+  display: flex;
+  margin: auto;
+  justify-content: center;
 }
 
 .imageTextBlock p {
-    text-align: left;
-    max-width: 400px;
+  text-align: left;
+  max-width: 400px;
 }
 
 .imageTextBlockContent {
-    display: grid;
-    justify-items: center;
-    margin:auto;
+  display: grid;
+  justify-items: center;
+  margin: auto;
 }
 
 .imageTextBlock img {
-    max-width: 358px;
-    margin:auto;
+  max-width: 358px;
+  margin: auto;
 }

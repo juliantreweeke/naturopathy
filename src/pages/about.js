@@ -6,7 +6,9 @@ import AmandaImage from '../../media/images/amanda-about-me.jpg';
 
 const Content = () => (
   <>
-    <Heading headingLevel="h1" style={{ fontSize: '2.4rem' }}>Amanda Lane Sydney Based Naturopath</Heading>
+    <Heading headingLevel="h1" style={{ fontSize: '2.4rem' }}>
+      Amanda Lane Sydney Based Naturopath
+    </Heading>
     <p>
       I’m an Australian Naturopath, Nutrition coach and Registered Nurse
       offering online consultations globally.
@@ -58,7 +60,7 @@ const Image = () => <img src={AmandaImage} alt="amanda lane naturopath" />;
 
 const AboutPage = () => (
   <App>
-    <ColumnLayout left={<Content/>} right={<Image/>} />
+    <ColumnLayout left={<Content />} right={<Image />} />
   </App>
 );
 

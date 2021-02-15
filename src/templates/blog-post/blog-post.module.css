@@ -1,28 +1,28 @@
 @import '../../styles/variables.css';
 
 .blogPost {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .post {
-    padding: 20px;
+  padding: 20px;
 }
 
 .readMore {
-    max-width: 900px;
-    margin:auto;
-    margin-bottom: 45px;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 45px;
 }
 
 .readMore h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .readMore h2:before,
 .readMore h2:after {
   background-color: #000;
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   position: relative;
@@ -39,15 +39,14 @@
   left: 0.5em;
   margin-right: -50%;
 }
-  
 
 @media (min-width: 550px) {
-    .post {
-        margin: 60px auto;
-        max-width: 500px;
-    }
+  .post {
+    margin: 60px auto;
+    max-width: 500px;
+  }
 
-    .readMore {
-        margin-bottom: 95px;
-    }
+  .readMore {
+    margin-bottom: 95px;
+  }
 }

@@ -14,8 +14,7 @@ The challenge was to make both styles work with each other while I worked on ver
 -- Get SVG's to work and replace images in footer (SVG's broke after upgrading gatsby)
 -- Create Courses page
 -- Create Contact page
--- Update Favicon
--- Finish Helmet component
+-- Update Helmet component
 ## Technology
 -- Gatsby 
 -- Netlify

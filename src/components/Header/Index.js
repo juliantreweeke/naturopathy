@@ -10,7 +10,14 @@ const Header = ({ links, isMenuOpen, toggleMenuOpen }) => {
   const navLinks = links.map(({ title, link, href }, index) => (
     <li className={styles.navItem} key={index}>
       {href ? (
-        <a href={href}>{title}</a>
+        <a
+          href={href}
+          alt="send me an email"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {title}
+        </a>
       ) : (
         <Link
           to={`/${link}`}

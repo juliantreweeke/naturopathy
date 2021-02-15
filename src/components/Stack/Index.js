@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './stack.module.css';
 
 const Stack = ({ children, gutter, gutterEnd }) => {
-  const style = { 
+  const style = {
     '--gutter': `${gutter}px`,
     '--gutter-end': gutterEnd ? `${gutterEnd}px` : `${gutter}px`,
   };

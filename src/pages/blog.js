@@ -19,31 +19,44 @@ export const blogPageQuery = graphql`
       }
     }
   }
-`
+`;
 
-const BlogPage = ({data}) => {
+const BlogPage = ({ data }) => {
   const { nodes } = data.allContentfulBlogPost;
   const blogPosts = nodes.map((node) => {
     return {
       ...node,
-      image: node.image.file.url
-    }
-  })
+      image: node.image.file.url,
+    };
+  });
 
-  const [ latestBlogPost, ...remainingBlogPosts ] =  blogPosts;
+  const [latestBlogPost, ...remainingBlogPosts] = blogPosts;
   const latestBlogRoute = `blog/${latestBlogPost.slug}`;
 
   return (
     <App>
       <section className="full">
-        <Banner backgroundImage={latestBlogPost.image} route={latestBlogRoute} linkText="READ MORE">
+        <Banner
+          backgroundImage={latestBlogPost.image}
+          route={latestBlogRoute}
+          linkText="READ MORE"
+        >
           <Heading></Heading>
-          <Heading headingLevel="h1" variant="white" style={{ fontSize: '5.2rem' }}>
+          <Heading
+            headingLevel="h1"
+            variant="white"
+            style={{ fontSize: '5.2rem' }}
+          >
             {latestBlogPost.heading}
           </Heading>
         </Banner>
 
-        <CardGroup cardGroupVariant cardVariant="black" cards={remainingBlogPosts} headingLevel="h2" />
+        <CardGroup
+          cardGroupVariant
+          cardVariant="black"
+          cards={remainingBlogPosts}
+          headingLevel="h2"
+        />
       </section>
     </App>
   );
