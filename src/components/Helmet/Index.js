@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactHelmet from 'react-helmet';
-import LeafIcon from '../../../media/icons/leaf.png';
 
 const title = 'Amanda Lane Naturopath';
 const description = 'Website for Naturopath Amanda Lane';
 
+//TODO Work out why Helmet breaks when adding link rel files
 const profile = {
   favicon16: {
-    src: LeafIcon,
+    src: '',
   },
   favicon32: {
-    src: LeafIcon,
+    src: '',
   },
   bigIcon: {
-    src: LeafIcon,
+    src: '',
   },
   background: '#6b5858',
 };
@@ -40,9 +40,9 @@ const Helmet = () => (
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={profile.favicon32.src} />
     <meta name="twitter:image:src" content={profile.bigIcon.src} />
-    <link rel="apple-touch-icon" sizes="180x180" href={profile.appleIcon} />
-    <link rel="icon" type="image/png" sizes="32x32" href={profile.favicon32} />
-    <link rel="icon" type="image/png" sizes="16x16" href={profile.favicon16} />
+    {/* <link rel="apple-touch-icon" sizes="180x180" href={profile.appleIcon} /> */}
+    {/* <link rel="icon" type="image/png" sizes="32x32" href={profile.favicon32} />
+    <link rel="icon" type="image/png" sizes="16x16" href={profile.favicon16} />  */}
     <script
       src="https://embed.acuityscheduling.com/js/embed.js"
       type="text/javascript"

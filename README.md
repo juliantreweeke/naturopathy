@@ -8,7 +8,7 @@ After this first initial MVP, I decided I wanted to use vanilla css and build my
 The migration took longer then expected, and at one point in time I had a half state using some pages with Rebass and some without.
 
 The challenge was to make both styles work with each other while I worked on version 2 of the site and gradually replaced pages.
-## TODO
+## TO DO
 * Agree on 3 Heading sizes with designer to be used through site and update Title component appropriately
 * Write e2e cypress tests
 * Create Work with me page
