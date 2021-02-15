@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../components/App';
+import App from '../components/App/Index';
 import CardGroup from '../components/CardGroup/Index';
 import ColumnLayout from '../components/ColumnLayout/Index';
 import useScript from '../hooks/useScript';

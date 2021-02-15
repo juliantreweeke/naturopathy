@@ -1,9 +1,9 @@
 import React from 'react';
 import { Heading, Box } from 'rebass/styled-components';
-import Layout from '../components/Layout';
+import App from '../components/App/Index';
 
 const NotFoundPage = () => (
-  <Layout>
+  <App>
     <Box width={[320, 400, 600]} m="auto">
       <Heading
         color="primaryDark"
@@ -16,7 +16,7 @@ const NotFoundPage = () => (
         There isn&apos;t anything here
       </Heading>
     </Box>
-  </Layout>
+  </App>
 );
 
 export default NotFoundPage;
