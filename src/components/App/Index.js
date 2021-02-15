@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Footer from '../Footer/Index';
 import Header from '../Header/Index';
-import Helmet from '../Helmet';
+import Helmet from '../Helmet/Index';
 import Headroom from 'react-headroom';
 import './app.css'
 import { links, socialMediaLinks} from '../../navigation';

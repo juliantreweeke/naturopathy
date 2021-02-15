@@ -4,7 +4,7 @@ import Burger from '../Burger/Index';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styles from './header.module.css';
-import Logo from '../Logo';
+import Logo from '../Logo/Index';
 
 const Header = ({ links, isMenuOpen, toggleMenuOpen }) => {
   const navLinks = links.map(({ title, link, href }, index) => (

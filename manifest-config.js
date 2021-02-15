@@ -1,11 +1,9 @@
-const colors = require('./colors');
-
 module.exports = {
   name: 'Amanda Lane Naturopath',
   short_name: 'Amanda Lane Naturopath',
   start_url: '/',
-  background_color: colors.background,
-  theme_color: colors.primary,
+  background_color: '#F3F7F8',
+  theme_color: '#6b5858',
   display: 'minimal-ui',
   icon: './media/icons/cross.png',
 };
