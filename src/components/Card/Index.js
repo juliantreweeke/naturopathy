@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './card.module.css';
 import { Link } from 'gatsby';
-import Heading from '../Heading';
+import Heading from '../Heading/Index';
 
 const headingStyles = {
   padding: '8px 0px',

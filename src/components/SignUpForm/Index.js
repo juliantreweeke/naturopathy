@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Button from '../../components/Button/Index';
-import Stack from '../../components/Stack/Index';
+import Stack from '../Stack/Index';
+import Button from '../Button/Index';
 import styles from './signUpForm.module.css';
 import useSignUpForm from '../../hooks/useSignUpForm';
 import { fetchPost } from '../../utils/fetchMethods';
